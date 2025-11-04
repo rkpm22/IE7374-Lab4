@@ -297,46 +297,6 @@ Provides detailed metrics for each class:
 - **False Negatives (FN)**: Incorrectly predicted malignant as benign
 - **True Positives (TP)**: Correctly predicted malignant as malignant
 
-## MLOps Best Practices Demonstrated
-
-1. ✅ **Containerization**: Entire training pipeline in Docker
-2. ✅ **Reproducibility**: Fixed random seeds and versioned dependencies
-3. ✅ **Configuration Management**: Environment variables for hyperparameters
-4. ✅ **Artifact Management**: Organized model storage in dedicated folder
-5. ✅ **Evaluation Tracking**: JSON-based results for logging and comparison
-6. ✅ **Preprocessing Persistence**: Saved scaler ensures consistent data transformation
-7. ✅ **Separation of Concerns**: Models separated from source code
-
-## Use Cases
-
-### For Development
-- Experiment with different hyperparameters
-- Compare model performance across configurations
-- Understand ML pipeline workflow
-
-### For Production (Future Enhancements)
-- Models can be loaded by serving containers
-- Scalers ensure consistent preprocessing in production
-- JSON results can be logged to experiment tracking systems
-
-## Troubleshooting
-
-### Issue: Models folder not created
-**Solution**: Ensure Docker has write permissions. The Dockerfile creates the folder, but verify with `docker run` commands.
-
-### Issue: Different results on rerun
-**Solution**: Ensure `RANDOM_STATE` environment variable is set consistently.
-
-### Issue: Cannot load model in another script
-**Solution**: Ensure you load both the scaler and model, and apply scaler to new data before predictions.
-
-## Next Steps (Lab2)
-
-This Lab1 focuses on training and evaluation. Lab2 will add:
-- Multi-stage Docker builds
-- Web server (Flask) for model serving
-- REST API endpoints
-- HTML templates for user interface
 
 ## License & Course Information
 
