@@ -1,0 +1,21 @@
+{
+  "accuracy": 0.9649122807017544,
+  "n_estimators": 100,
+  "max_depth": 10,
+  "test_size": 0.2,
+  "random_state": 42,
+  "confusion_matrix": [
+    [
+      40,
+      3
+    ],
+    [
+      1,
+      70
+    ]
+  ],
+  "class_names": [
+    "malignant",
+    "benign"
+  ]
+}
